@@ -12,7 +12,7 @@
     "sources": "https://github.com/Zaryon/BetterAnimalFeeding"
   },
   "license": "MIT",
-  "icon": "assets/betteranimalfeeding/icon.png",
+  "icon": "assets/betteranimalfeeding/BetterAnimalFeeding.png",
   "environment": "*",
   "entrypoints": {
     "main": [
