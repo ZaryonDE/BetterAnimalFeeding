@@ -90,14 +90,7 @@ public abstract class AnimalEntityMixin extends PassiveEntity implements Cooldow
                             if (e.getType() != thisAnimal.getType()) return false;
                             if (e.getBreedingAge() != 0) return false;
 
-                            try {
-                                var field = AnimalEntity.class.getDeclaredField("loveTicks");
-                                field.setAccessible(true);
-                                int eLoveTicks = field.getInt(e);
-                                return eLoveTicks == 0;
-                            } catch (Exception ex) {
-                                return true;
-                            }
+                            return ((AnimalEntityAccessor) e).getLoveTicks() == 0;
                         }
                 );
 

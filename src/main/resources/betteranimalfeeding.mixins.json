@@ -4,7 +4,8 @@
   "package": "de.zaryon.betteranimalfeeding.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "AnimalEntityMixin"
+    "AnimalEntityMixin",
+    "AnimalEntityAccessor"
   ],
   "injectors": {
     "defaultRequire": 1
