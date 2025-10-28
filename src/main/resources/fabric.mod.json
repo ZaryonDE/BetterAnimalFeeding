@@ -3,31 +3,35 @@
   "id": "betteranimalfeeding",
   "version": "${version}",
   "name": "Better Animal Feeding",
-  "description": "Automatically forwards food to the next unfed animal when clicking on already fed.",
+  "description": "Automatically forwards food to unfed animals in dense farms. No more struggling with overlapping hitboxes!",
   "authors": [
     "Zaryon"
   ],
   "contact": {
     "homepage": "https://modrinth.com/mod/betteranimalfeeding",
-    "sources": "https://github.com/Zaryon/BetterAnimalFeeding"
+    "sources": "https://github.com/yourusername/BetterAnimalFeeding"
   },
   "license": "MIT",
   "icon": "assets/betteranimalfeeding/BetterAnimalFeeding.png",
+
   "environment": "*",
+
   "entrypoints": {
     "main": [
       "de.zaryon.betteranimalfeeding.BetterAnimalFeeding"
     ]
   },
+
   "mixins": [
     "betteranimalfeeding.mixins.json"
   ],
+
   "depends": {
-    "fabricloader": ">=0.15.6",
-    "fabric-api": "*",
-    "minecraft": "~1.19.2",
+    "fabricloader": ">=0.14.19",
+    "minecraft": "~1.19.1",
     "java": ">=17"
   },
+
   "suggests": {
     "modmenu": "*"
   }

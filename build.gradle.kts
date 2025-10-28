@@ -38,7 +38,7 @@ tasks.named("build") {
 }
 
 base {
-    archivesName.set("BetterAnimalFeeding-1.19.2-Fabric")
+    archivesName = "BetterAnimalFeeding-1.19.1-Fabric"
 }
 
 repositories {
@@ -50,14 +50,11 @@ repositories {
 }
 
 dependencies {
-    minecraft("com.mojang:minecraft:1.19.2")
-    mappings("net.fabricmc:yarn:1.19.2+build.1:v2")
-    modImplementation("net.fabricmc:fabric-loader:0.15.11")
-    modImplementation("net.fabricmc.fabric-api:fabric-api:0.77.0+1.19.2")
-
-    modImplementation("com.terraformersmc:modmenu:4.1.2") {
-        isTransitive = false
-    }
+    minecraft("com.mojang:minecraft:1.19.1")
+    mappings("net.fabricmc:yarn:1.19.1+build.1:v2")
+    modImplementation("net.fabricmc:fabric-loader:0.17.2")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:0.58.5+1.19.1")
+    modImplementation("com.terraformersmc:modmenu:4.0.5")
 }
 
 java {
@@ -73,36 +70,18 @@ tasks.withType<JavaCompile> {
 }
 
 tasks.processResources {
-    inputs.property("version", project.version)
-
     filesMatching("fabric.mod.json") {
         expand("version" to project.version)
     }
 }
 
-tasks.jar {
-    from("LICENSE") {
-        rename { "${it}_${project.base.archivesName.get()}" }
-    }
-}
-
-idea {
-    module {
-        isDownloadSources = false
-        isDownloadJavadoc = false
-    }
-}
-
 modrinth {
     token.set(System.getenv("MODRINTH_TOKEN"))
-    projectId.set("betterbreeder")
+    projectId.set("betteranimalfeeding")
     versionNumber.set(version.toString())
     versionType.set("release")
     uploadFile.set(tasks.remapJar)
-    gameVersions.addAll(listOf("1.19.2"))
+    gameVersions.addAll(listOf("1.19.1"))
     loaders.add("fabric")
     changelog.set(System.getenv("GITHUB_RELEASE_BODY") ?: "Automatischer Release-Build")
-    dependencies {
-        required.project("fabric-api")
-    }
 }
