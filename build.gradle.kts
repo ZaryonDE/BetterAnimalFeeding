@@ -1,7 +1,7 @@
 import java.util.Properties
 
 plugins {
-    id("fabric-loom") version "1.5.8"
+    id("fabric-loom") version "1.6.5"
     id("maven-publish")
     id("com.modrinth.minotaur") version "2.+"
 }
@@ -38,7 +38,7 @@ tasks.named("build") {
 }
 
 base {
-    archivesName.set("BetterAnimalFeeding-1.20.3-Fabric")
+    archivesName.set("BetterAnimalFeeding-1.20.4-Fabric")
 }
 
 repositories {
@@ -50,10 +50,10 @@ repositories {
 }
 
 dependencies {
-    minecraft("com.mojang:minecraft:1.20.3")
-    mappings("net.fabricmc:yarn:1.20.3+build.1:v2")
+    minecraft("com.mojang:minecraft:1.20.4")
+    mappings("net.fabricmc:yarn:1.20.4+build.1:v2")
     modImplementation("net.fabricmc:fabric-loader:0.15.11")
-    modImplementation("net.fabricmc.fabric-api:fabric-api:0.91.1+1.20.3")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:0.97.0+1.20.4")
 
     modImplementation("com.terraformersmc:modmenu:9.0.0") {
         isTransitive = false
@@ -99,7 +99,7 @@ modrinth {
     versionNumber.set(version.toString())
     versionType.set("release")
     uploadFile.set(tasks.remapJar)
-    gameVersions.addAll(listOf("1.20.3"))
+    gameVersions.addAll(listOf("1.20.4"))
     loaders.add("fabric")
     changelog.set(System.getenv("GITHUB_RELEASE_BODY") ?: "Automatischer Release-Build")
     dependencies {
