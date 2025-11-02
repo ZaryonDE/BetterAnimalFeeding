@@ -32,8 +32,6 @@ tasks.named("build") {
         versionProps.setProperty("modVersion", newVersion)
         versionFile.outputStream().use { versionProps.store(it, null) }
         println("Version updated: $currentVersion -> $newVersion")
-        currentVersion = newVersion
-        project.version = newVersion
     }
 }
 
