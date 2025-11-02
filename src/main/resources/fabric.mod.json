@@ -23,9 +23,9 @@
     "betteranimalfeeding.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.15.6",
+    "fabricloader": ">=0.17.2",
     "fabric-api": "*",
-    "minecraft": "~1.21.1",
+    "minecraft": "~1.21.2",
     "java": ">=21"
   },
   "suggests": {
