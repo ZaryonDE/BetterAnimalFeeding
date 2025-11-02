@@ -36,7 +36,7 @@ tasks.named("build") {
 }
 
 base {
-    archivesName.set("BetterAnimalFeeding-1.21.3-Fabric")
+    archivesName.set("BetterAnimalFeeding-1.21.4-Fabric")
 }
 
 repositories {
