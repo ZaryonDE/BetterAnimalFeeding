@@ -50,12 +50,12 @@ repositories {
 }
 
 dependencies {
-    minecraft("com.mojang:minecraft:1.21.3")
-    mappings("net.fabricmc:yarn:1.21.3+build.1:v2")
+    minecraft("com.mojang:minecraft:1.21.4")
+    mappings("net.fabricmc:yarn:1.21.4+build.1:v2")
     modImplementation("net.fabricmc:fabric-loader:0.17.2")
-    modImplementation("net.fabricmc.fabric-api:fabric-api:0.114.1+1.21.3")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:0.119.4+1.21.4")
 
-    modImplementation("com.terraformersmc:modmenu:12.0.0") {
+    modImplementation("com.terraformersmc:modmenu:13.0.3") {
         isTransitive = false
     }
 }
@@ -92,7 +92,7 @@ modrinth {
     versionNumber.set(version.toString())
     versionType.set("release")
     uploadFile.set(tasks.remapJar)
-    gameVersions.addAll(listOf("1.21.3"))
+    gameVersions.addAll(listOf("1.21.4"))
     loaders.add("fabric")
     changelog.set(System.getenv("GITHUB_RELEASE_BODY") ?: "Automatischer Release-Build")
     dependencies {
