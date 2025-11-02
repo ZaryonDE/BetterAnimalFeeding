@@ -9,4 +9,7 @@ public interface AnimalEntityAccessor {
 
     @Accessor("loveTicks")
     int getLoveTicks();
+
+    @Accessor("loveTicks")
+    void setLoveTicks(int loveTicks);
 }

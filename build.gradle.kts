@@ -36,7 +36,7 @@ tasks.named("build") {
 }
 
 base {
-    archivesName.set("BetterAnimalFeeding-1.21.8-Fabric")
+    archivesName.set("BetterAnimalFeeding-1.21.9-Fabric")
 }
 
 repositories {
@@ -48,12 +48,12 @@ repositories {
 }
 
 dependencies {
-    minecraft("com.mojang:minecraft:1.21.8")
-    mappings("net.fabricmc:yarn:1.21.8+build.1:v2")
+    minecraft("com.mojang:minecraft:1.21.9")
+    mappings("net.fabricmc:yarn:1.21.9+build.1:v2")
     modImplementation("net.fabricmc:fabric-loader:0.17.2")
-    modImplementation("net.fabricmc.fabric-api:fabric-api:0.133.4+1.21.8")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:0.134.0+1.21.9")
 
-    modImplementation("com.terraformersmc:modmenu:15.0.0") {
+    modImplementation("com.terraformersmc:modmenu:16.0.0-rc.1") {
         isTransitive = false
     }
 }
@@ -90,7 +90,7 @@ modrinth {
     versionNumber.set(version.toString())
     versionType.set("release")
     uploadFile.set(tasks.remapJar)
-    gameVersions.addAll(listOf("1.21.8"))
+    gameVersions.addAll(listOf("1.21.9"))
     loaders.add("fabric")
     changelog.set(System.getenv("GITHUB_RELEASE_BODY") ?: "Automatischer Release-Build")
     dependencies {
